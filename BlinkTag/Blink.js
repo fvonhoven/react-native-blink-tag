@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
-import { AppRegistry, StyleSheet, Animated } from 'react-native'
+import React, { PureComponent } from 'react'
+import { StyleSheet, Animated } from 'react-native'
 
-export default class Blink extends Component {
+export default class Blink extends PureComponent {
   constructor (props) {
     super(props)
     this.opacityValue = new Animated.Value(0)
@@ -36,5 +36,3 @@ const styles = StyleSheet.create({
     color: '#333333'
   }
 })
-
-AppRegistry.registerComponent('Blink', () => Blink)
