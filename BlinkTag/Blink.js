@@ -1,9 +1,5 @@
 import React, { Component } from 'react'
-import {
-  AppRegistry,
-  StyleSheet,
-  Animated
-} from 'react-native'
+import { AppRegistry, StyleSheet, Animated } from 'react-native'
 
 export default class Blink extends Component {
   constructor (props) {
@@ -27,11 +23,9 @@ export default class Blink extends Component {
       outputRange: [1, 0, 1]
     })
     return (
-      <Animated.Text
-        style={[styles.blinkLabel, this.props.style, {opacity}]}
-      >
+      <Animated.View style={[styles.blinkLabel, this.props.style, {opacity}]}>
         {this.props.children}
-      </Animated.Text>
+      </Animated.View>
     )
   }
 }
